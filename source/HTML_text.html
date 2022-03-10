@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Разметка текста</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="page-header bg">
+	  <div class="container">
+        <nav>
+          <a href="../index.html"> На главную </a>
+        </nav>
+	  </div>
+	</header>
+    
+	<main>
+      <article>
+	    <div class="container">
+
+<h1>Разметка текста</h1>
+<h2>Списки</h2>
+<h3>Неупорядоченный список <span class="engl">(unordered list)</span></h3>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt; пункт списка <span class="engl">(list item)</span> &lt;/li&gt;
+  &lt;li&gt; еще пункт,порядок не имеет значения &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<div class="sample">
+<ul>
+  <li> пункт списка (list item) </li>
+  <li> еще пункт,порядок не имеет значения </li>
+</ul>
+</div>
+
+<h3>Упорядоченный список <span class="engl">(ordered list)</span> </h3>
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;первый пункт &lt;/li&gt;
+  &lt;li&gt;второй &lt;/li&gt;
+  &lt;li&gt;третий, все пронумерованы &lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<div class="sample">
+<ol>
+  <li>первый пункт </li>
+  <li>второй </li>
+  <li>третий, все пронумерованы </li>
+</ol>
+</div>
+<p>Порядок, направление нумерации, тип маркера меняются атрибутами: </p>
+<ul>
+<li><span class="atrybut">start </span> <i>(может быть отрицательным)</i> </li>
+<li><span class="atrybut">reversed </span> <i>(не требует значения)</i> </li>
+<li><span class="atrybut">type</span> <i>(можно задать строчные и заглавные латинские буквы или римские цифры: "A | a | I | i | 1")</i></li>
+</ul>
+
+<h3>Список описаний <span class="engl">(description list)</span></h3>
+
+<p>Подходит для разметки вопросов-ответов, наименований и определений, категорий и тем</p>
+
+<pre><code>&lt;dl&gt; 
+  &lt;dt&gt; термин <span class="engl">(description term)</span> &lt;/dt&gt;
+    &lt;dd&gt; описание или определение <span class="engl">(description definition)</span> &lt;/dd&gt;
+  &lt;dt&gt; Категория &lt;/dt&gt;
+    &lt;dd&gt; тема 1 &lt;/dd&gt;
+    &lt;dd&gt; тема 2 &lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+<div class="sample">
+<dl> 
+    <dt> термин (description term) </dt>
+    <dd> описание или определение (description definition) </dd>
+	<dt> Категория </dt>
+    <dd> тема 1 </dd>
+	<dd> тема 2 </dd>
+</dl>
+</div>
+
+<h2>Преформатированный текст <span class="engl">(preformatted text)</span> и код </h2>
+
+<p>Все пробелы и переносы внутри тега будут отображаться браузером.</p>
+<pre><code>&lt;pre&gt;Я
+        преформатированный
+        
+		         т е к с т
+&lt;/pre&gt;
+</code></pre>
+
+<div class="sample">
+<pre>Я
+        преформатированный
+        
+		         т е к с т
+</pre>
+</div>
+
+<p> Тег <span class="tag">&lt;code&gt;</span>. Используется для обозначения фрагментов кода, в браузере отображается как правило моноширинным шрифтом. Можно вкладывать внутрь тега <span class="tag"> &lt;pre&gt;</span>, а вот наоборот - нельзя </p>
+
+
+<h2>Цитаты <span class="engl">(quote)</span></h2>
+<h3>Небольшие цитаты</h3>
+
+<p>Тег <span class="tag"> &lt;q&gt;</span>  - для выделения цитат внутри предложения. Текст внутри автоматически обрамляетcя кавычками. </p>
+
+<p>Тег <span class="tag">&lt;cite&gt;</span> -  в него заключают адрес источника цитаты, произведение, автор и т.п. Содержимое в браузере выделяется курсивом. Тэг также может использоваться самостоятельно</p>
+
+<pre><code> &lt;q&gt; Я цитата &lt;/q&gt; &lt;cite&gt; Я автор цитаты &lt;/cite&gt; </code></pre>
+
+<div class="sample">
+<p> <q> Я цитата </q> <cite> Я автор цитаты </cite> </p>
+</div>
+
+<h3>Длинные цитаты</h3>
+
+<p>Тег <span class="tag">&lt;blockquote&gt;</span> выделяет цитату как отдельный блок текста с отступами.</p>
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;Как потопаешь, так и полопаешь &lt;/p&gt;
+  &lt;cite&gt;народная мудрость&lt;/cite&gt;
+&lt;/blockquote&gt;
+</code></pre>
+
+<div class="sample">
+<blockquote>
+  <p>Как потопаешь, так и полопаешь </p>
+  <cite>народная мудрость</cite>
+</blockquote>
+</div>
+
+<h2>Разметка фрагментов текста</h2>
+<h3>Символы-мнемоники</h3>
+
+<p> начинаются с амперсанда (&) и заканчиваются точкой с запятой (;) </p>
+<p> Чтобы использовать специальные символы в тексте страницы как обычные символы их нужно заменить на символы-мнемоники </p>
+<p> знак меньше - <span class="tag">&amp;lt; </span> <span class="engl">(less than)</span> </p>
+<p> знак больше - <span class="tag">&amp;gt; </span> <span class="engl">(greater than)</span> </p>
+<a href="https://dev.w3.org/html5/html-author/charref"> Таблица символов </a>
+
+<h3>Перенос строк</h3>
+
+<p>Тег <span class="tag">&lt;br&gt;</span> <span class="engl">(line break)</span>. Не создает новый абзац!  Удобен для разметки стихов.</p>
+
+<h3>Верхний и нижний индексы</h3>
+
+<p> <span class="tag">&lt;sup&gt;</span> <span class="engl">(superscrip)</span> -  верхний </p>
+<p> <span class="tag">&lt;sub&gt;</span> <span class="engl">(subscript)</span>  -  нижниий </p>
+
+<p>можно использовать внутри друг друга</p>
+
+
+<h3>Дата и время</h3>
+
+<p> Тег <span class="tag">&lt;time&gt;</span>. </p>
+
+<pre><code>&lt;time datetime="2022-03-01T10:00"&gt;10:00 утра&lt;/time&gt;
+&lt;time datetime="2020-04-01"&gt;1 апреля 2020&lt;/time&gt;
+&lt;time datetime="2021-01-01"&gt;в январе 21-го&lt;/time&gt;
+&lt;time datetime="2022-03-09"&gt;намедни, давеча, вчерась&lt;/time&gt;
+</code></pre>
+<div class="sample">
+<pre><time datetime="2022-03-01T10:00">10:00 утра</time>
+<time datetime="2020-04-01">1 апреля 2020</time>
+<time datetime="2021-01-01">в январе 21-го</time>
+<time datetime="2022-03-09">намедни, давеча, надысь</time></pre>
+</div>
+<p>Браузер отображает только содержимое тега, <span class="atrybut">datetime</span>  нужно для программного получения даты.</p>
+
+<h3>Акцентирование внимания</h3>
+
+<p>Теги <span class="tag">&lt;em&gt;</span> <span class="engl">(emphasis)</span> и <span class="tag"> &lt;i&gt;</span> <span class="engl">(italic)</span> -  выделяют текст курсивом. </p>
+
+<p> <span class="tag"> &lt;em&gt; </span> подчеркивает важность выделяемого (акцент)</p>
+
+
+<h3>Выделение и придание важности</h3>
+
+<p> Теги <span class="tag">&lt;strong&gt;</span> и <span class="tag">&lt;b&gt;</span> <span class="engl">(bold)</span> - делают текст жирным.
+
+<p> Тег <span class="tag">&lt;strong&gt;</span> указывает на важность. Он может использоваться для предупреждений  и т.п. </p>
+
+<pre><code>&lt;p&gt;&lt;strong&gt;Внимание!&lt;/strong&gt; Этот конспект не является полноценным учебником по верстке. &lt;br&gt;
+Это &lt;b&gt;краткие заметки&lt;/b&gt; для себя. &lt;/p&gt;</code></pre>
+
+<div class="sample">
+<p><strong>Внимание!</strong> Этот конспект не является полноценным учебником по верстке. <br>
+Это <b>краткие заметки</b> для себя. </p>
+</div>
+
+<p>Тег <span class="tag">&lt;b&gt;</span> только для выделения текста без придания ему особой важности. </p>
+
+<h3>Описание изменений</h3>
+
+<p> Тег <span class="tag">&lt;del&gt;</span> <span class="engl">(delete)</span>  - удалёный текст. В браузере текст будет <del>перечёркнут</del>. </p>
+
+<p> Тег <span class="tag">&lt;ins&gt;</span> <span class="engl">(insert)</span> - добавленный текст. В браузере <ins>подчеркивается</ins> </p>
+
+
+<h3>Разделение контента</h3>
+
+<p> Теги <span class="tag">&lt;div&gt;</span> и <span class="tag">&lt;span&gt;</span>. Используются как обертка для стилизации или группировки других элементов.
+
+<p><span class="tag">&lt;div&gt;</span>  - выделяет блоки, <span class="tag">&lt;span&gt; </span>- слова и фразы внутри абзаца. </p>
+
+</div>
+</article>
+</main>
+</body>
